@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;300;400;500;600;700;800;900&display=swap");
+
+:root {
+  --orange-400: hsl(31, 77%, 52%);
+  --cyan-600: hsl(184, 100%, 22%);
+  --cyan-800: hsl(179, 100%, 13%);
+  --white: hsla(0, 0%, 100%, 0.75);
+  --light-gray: hsl(0, 0%, 95%);
+
+  --text-40: 4rem;
+  --text-15: 1.5rem;
+
+  --lexend: "Lexend Deca", sans-serif;
+  --big-shoulders: "Big Shoulders Display", cursive;
+
+  font-size: 62.5%;
+}
+
+:root,
+* {
+  box-sizing: border-box;
+  font-family: var(--lexend);
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+
+/* PREVIEW CARDS */
+
+.preview-cards-container {
+  width: 87.2%;
+  max-width: 37.5rem;
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 950px){
+    .preview-cards-container {
+        flex-flow: row nowrap;
+        max-width: 92rem;
+    }
+}
+
+/* PREVIEW CARD */
+
+.preview-card {
+  flex: 1 0 200px;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2.5rem;
+  padding: 4.8rem 4.9rem;
+}
+
+.preview-card:nth-child(2) {
+  border-radius: 0.8rem;
+}
+
+.car-icon-container {
+  margin-bottom: 1rem;
+}
+
+.preview-card__heading {
+    font-family: var(--big-shoulders);
+    font-size: var(--text-40);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.preview-card__info {
+    font-family: var(--lexend);
+    font-size: var(--text-15);
+    color: var(--white);
+    line-height: 2.5rem;
+}
+
+@media screen and (min-width: 950px){
+    .preview-card__info {
+        margin-bottom: 5.8rem;
+    }
+}
+
+.preview-card__button {
+    font-family: var(--lexend);
+    font-size: var(--text-15);
+    line-height: 2.5rem;
+    background-color: var(--light-gray);
+    width: max-content;
+    padding: 1.1rem 3.2rem;
+    border-radius: 2.5rem;
+    border: 2px solid var(--light-gray);
+    cursor: pointer;
+    transition: background-color 250ms ease, color 250ms ease, border 250ms ease;
+}
+
+.preview-card .preview-card__button:hover {
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+}
